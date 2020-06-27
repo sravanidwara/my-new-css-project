@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        .flex-container {
+          display: flex;
+          align-items: stretch;
+          padding:.5cm;
+          background-color: rgba(255, 255, 255, 0);
+          height: 585px;
+          overflow: hidden;
+          overflow-x: auto;
+        }
+        html{
+            font-size: 29px;
+            background-image: url(https://wallpaperplay.com/walls/full/f/7/b/36828.jpg);
+            background-size: 100%;
+        }
+        
+        
+        .flex-container>div{
+          flex: 1;
+          align-self: flex-start;
+          padding:.1cm;
+          margin: .1cm;
+          width: 10px;
+          background-color: rgba(250, 246, 246, 0.7);
+          border-radius: 8px;
+          flex: 0 0 220px;
+        }
+        
+        .inp{
+            width: 95%;
+            border-radius: 4px;
+            height: .8cm;
+            border: none;
+            margin: 5px;
+        }
+        ::placeholder{
+            color:black;
+        }
+        .inpt{
+            border-radius: 4px;
+        }
+        .ta{
+            margin: 5px;
+            height: 1.5cm;
+        }
+        .a1{
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            display:block;
+            background-color: rgba(255, 0, 43, 0.479);
+            padding: 15px 10px 0px 10px;
+            height: 1.2cm;
+            text-align: center;
+        }
+        body{
+            margin: 0px;
+        }
+        .a2{
+            color: white;
+            display:block;
+            background-color: rgba(255, 0, 43, 0.2);
+            font-size: 0.6cm;
+            padding: 0 10px 0 10px;
+            height: 1cm;
+        }
+        .but{
+            color: white;
+            background-color: rgba(184, 17, 31, 0.781);
+            border: none;
+            margin-right: 10px;
+            font-size: 21px;
+            border-radius: 3px;
+        }
+        .but2:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        .a3:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        .inp2:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        .spl:focus{
+            color: black;
+            background-color: white;
+        }
+        .pen {
+            position: sticky;
+        }
+
+        .pen:hover .edit {
+            display: block;
+        }
+
+        .edit {
+            padding-top: 7px;   
+            padding-right: 1px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: none;
+            icon-large
+        }
+
+        .edit a {
+            color: #000;
+        }
+        .edit:hover{
+            opacity: 0.7;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="a1">
+        <button class="but but2" style="float:left"><i class="fas fa-home"></i></button>
+        <button class="but but2" style="float:left"><i class="fas fa-bars">Boards</i></button>
+        <input type="text"  class="spl but" style="float:left;width: 9%;">
+        <label style="color: white;text-align: center;">Tralala</label>
+        <button class="but but2"style="float:right"><i class="fas fa-plus"></i></button>
+        <button class="but but2"style="float:right"><i class="fas fa-user-alt"></i></button>
+
+    </div>
+    <div class="a2">
+        <span style="float:right"><button class ="but2"style="background-color: rgb(250, 249, 248,0);border:none;color:white;font-size:16px"><i class="fas fa-ellipsis-v" >Show Menu</i></button></span><label style="font-size: 0.46cm;">Frontend Training</label>
+
+    </div>
+    <div class="flex-container">
+        <div class="flex1" >
+          <span style="font-size: 17px;float:right" class="a3">...</span><label style="font-size: 17px;">To Do</label><br />
+          <div class="pen"><input type='text' placeholder="Learn HTML" class="inp inp2 inp3"><div class="edit" style="font-size: 24px;"><a href="#"><i class="fa fa-pencil-alt fa-sm"></i></a></div>
+          </div>
+          <div class="pen"><input type='text' placeholder="Learn CSS" class="inp inp2 inp3"><div class="edit" style="font-size: 24px;"><a href="#"><i class="fa fa-pencil-alt fa-sm"></i></a></div>
+          </div>
+          <div class="pen"><input type='text' placeholder="Learn JavaScript" class="inp inp2 inp3"><div class="edit" style="font-size: 24px;"><a href="#"><i class="fa fa-pencil-alt fa-sm"></i></a></div>
+          </div>
+          <label style="font-size: 14px;" class="a3">+Add another card </label>
+
+        </div>
+        <div class="flex1">
+          <span style="font-size: 17px;float:right" class="a3">...</span><label style="font-size: 17px;">Doing</label><br/>
+          <input type="text" placeholder="prepare resume" class="inp inp2"><br />
+          <textarea rows="5" placeholder="Enter a title for this card..."  class="inp ta"></textarea>
+                                <div >
+                                    <button class="inpt inp2" style="border: none;width: 35%;font-size: 0.4cm;padding: 5px 0 5px 0;background-color: rgb(219, 14, 14);color:white;">Add Card</button>
+                                    <i class="fas fa-times inp2" ></i>
+                                </div>
+          <label style="font-size: 14px;" class="a3">+Add another card</label><br />
+        </div>
+        <div class="flex1">
+            <span style="font-size: 17px;float:right" class="a3">...</span><label style="font-size: 17px;">Testing/Verifying</label><br/>
+            <input type="text" placeholder="Twitter app frontend" class="inp inp2"><br />
+            <label style="font-size: 14px;" class="a3">+Add another card</label><br />
+        </div>
+        <div class="flex1">
+            <span style="font-size: 17px;float:right" class="a3" class="a3">...</span><label style="font-size: 17px;">Deploying</label ><br/>
+            <input type="text" placeholder="Twitter app backend" class="inp inp2"><br />
+            <label style="font-size: 14px;" class="a3">+Add another card</label><br />
+          </div>
+        <div class="flex1">
+          <span style="font-size: 17px;float:right">...</span><label style="font-size: 17px;">Done</label><br />
+          <label style="font-size: 14px;" class="a3">+Add card</label>
+        </div>
+        <div class="flex1">
+          <label style="font-size: 14px;" class="a3">+Add another list</label>
+
+        </div>
+        <div class="flex1">
+            <textarea rows="3" placeholder="Enter list title..." class="inp ta" ></textarea>
+            <div >
+                <button class="inpt inp2" style="border: none;width: 35%;font-size: 0.4cm;padding: 5px 0 5px 0;background-color: rgb(219, 14, 14);color:white;" >Add Card</button>
+                <i class="fas fa-times inp2" ></i>
+            </div>
+
+        </div>  
+      </div>
+</body>
+</html>
